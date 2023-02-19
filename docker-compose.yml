@@ -4,7 +4,8 @@ services:
     build: .
     image: qiskit-jupyter
     volumes:
-      - ${PWD}/:/home/jovyan/work
+      - ${PWD}/work:/home/jovyan/work
+      - ${PWD}/studied:/home/jovyan/studied
       - ${PWD}/config/settings.conf:/home/jovyan/.qiskit/settings.conf
       - ${PWD}/config/ipython_kernel_config.py:/home/jovyan/.ipython/profile_default/ipython_kernel_config.py
     ports:
